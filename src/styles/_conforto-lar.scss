@@ -1,0 +1,74 @@
+@use 'variables';
+
+.conforto-lar {
+    padding: 80px 0;
+
+        h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: variables.$mainColor;
+    }
+
+    &__gallery-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+
+    &__img {
+    max-width: 50%;
+    position: relative; 
+
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    &:not(:first-child) {
+        display: none;
+    }
+    }
+}
+
+    &__text {
+    flex: 1;
+    p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: variables.$textColor;
+    font-weight: 300; 
+    }
+
+    b {
+    font-weight: 600; 
+    }
+    }
+
+
+    @media (max-width: 768px) {
+    padding: 40px 0;
+
+        h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    }
+
+    &__gallery-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    &__slides {
+    max-width: 100%; 
+    }
+
+    &__text {
+    padding: 0 10px;
+    }
+    }
+}
+

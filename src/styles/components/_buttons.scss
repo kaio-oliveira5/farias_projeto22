@@ -1,0 +1,38 @@
+@use '../variables';
+
+
+.button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &--primary {
+        background-color: variables.$highlightColor;
+        color: variables.$white;
+        
+        &:hover {
+            background-color: darken(variables.$highlightColor, 10%);
+        }
+    }
+    
+    &--secondary {
+        background-color: variables.$white;
+        color: variables.$highlightColor;
+        border: 2px solid variables.$highlightColor;
+        
+        &:hover {
+            background-color: darken(variables.$highlightColor, 30%);
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+}

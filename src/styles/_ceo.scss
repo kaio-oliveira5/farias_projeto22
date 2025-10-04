@@ -1,0 +1,100 @@
+@use 'variables';
+
+.container {
+
+.apresentacao-ceo {
+    padding: 80px 0; 
+    text-align: center;
+}
+
+.apresentacao-ceo__content { 
+        display: flex !important;
+        flex-direction: row !important; 
+        align-items: center; 
+        justify-content: center; 
+        max-width: 900px; 
+        margin: 40px auto; 
+        gap: 30px; 
+    }
+
+    .apresentacao-ceo__foto { 
+        height: 200px; 
+        border-radius: 8px; 
+        object-fit: cover; 
+        flex-shrink: 0; 
+        border: 2px solid variables.$mainColor; 
+        border-radius: 25%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    blockquote {
+        max-width: 700px; 
+        margin: 0; 
+        padding-left: 30px; 
+        
+        border-left: 5px solid variables.$mainColor; 
+        flex-grow: 1; 
+        text-align: left; 
+        
+        h2 {
+            font-size: 1.3em; 
+            margin-bottom: 8px;
+            color: #fff; 
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.0em; 
+            line-height: 1.4;
+            font-style: italic;
+            margin-bottom: 8px;
+            font-weight: 300;
+            color: #fff; 
+        }
+    }
+
+    footer {
+        margin-top: 8px;
+        font-size: 0.8em; 
+        font-style: normal;
+        color: #fff; 
+        text-align: left; 
+    }
+    
+    .apresentacao-ceo__mensagem-equipe {
+        max-width: 900px;
+        margin: 40px auto 0;
+        line-height: 1.6;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 0 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5); 
+        padding-top: 30px;
+        color: #fff; 
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+        
+        .apresentacao-ceo__content { 
+            flex-direction: column; 
+            align-items: center; 
+            margin: 20px auto;
+            gap: 15px; 
+        }
+
+        blockquote {
+            padding: 0 10px 0 20px; 
+            text-align: center; 
+            
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+        
+        footer {
+            text-align: center; 
+        }
+    }
+}

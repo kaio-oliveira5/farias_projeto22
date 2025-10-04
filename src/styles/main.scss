@@ -1,0 +1,66 @@
+@use 'variables';
+@use 'components/buttons';
+@use 'components/infos_bar';
+
+
+@use 'event'; 
+
+
+@use 'hero';
+@use './ceo'; 
+@use 'visao-obra';
+@use 'area-lazer';
+@use 'conforto-lar';
+@use 'localizacao';
+@use 'form-section';
+@use 'footer';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+
+
+    font-family: variables.$fontPrincipal; 
+
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    color: variables.$textColor; 
+    overflow-x: hidden; 
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+}

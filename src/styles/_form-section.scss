@@ -1,0 +1,84 @@
+@use 'variables';
+
+.form-section {
+    font-size: 15px;
+    padding: 80px 0;
+    background-color: variables.$mainColor; 
+    color: variables.$white;
+    text-align: center;
+
+    h2 {
+        color: variables.$white;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 1.1em;
+        margin-bottom: 40px;
+        font-weight: 300;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: variables.$white; 
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+    
+    .form-item {
+        margin-bottom: 20px;
+        
+        label {
+            display: block;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: variables.$colorLabel; 
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            color: variables.$colorLabel;
+            transition: border-color 0.3s;
+            
+            &:focus {
+                border-color: variables.$highlightColor;
+                outline: none;
+            }
+        }
+    }
+
+    .button--primary {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+        
+        .form {
+            max-width: 90%;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1em;
+            padding: 0 10px;
+        }
+    }
+}
