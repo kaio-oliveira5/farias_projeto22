@@ -49,8 +49,8 @@
 
 
     @media (max-width: 768px) {
+        .container {
         padding: 40px 0;
-        
         h2 {
             font-size: 1.8em;
         }
@@ -63,6 +63,7 @@
         &__mapa-container {
             margin: 0 10px 30px;
         }
+    }
     }
 }
 }
